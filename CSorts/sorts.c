@@ -71,3 +71,53 @@ void insertionSort(uint32_t arr[], unsigned int count)
         arr[j] = target;
     }
 }
+
+void heapSort(uint32_t arr[], unsigned int count)
+{
+    
+}
+
+unsigned int partition(uint32_t arr[], unsigned int left, unsigned int right)
+{
+    unsigned int i = left;
+    unsigned int j = right;
+    uint32_t pivot = arr[(left + right) / 2];
+    
+    while (i <= j) {
+        while (arr[i] < pivot) {
+            i++;
+        }
+        
+        while (j > 0 && arr[j] > pivot) {
+            j--;
+        }
+        
+        if (i <= j) {
+            swap(&arr[i], &arr[j]);
+            i++;
+            
+            if (j > 0) {
+                j--;
+            }
+        }
+    }
+    return i;
+}
+
+void quick_sort(uint32_t arr[], unsigned int left, unsigned int right)
+{
+    unsigned int index = partition(arr, left, right);
+    
+    if (left < index - 1) {
+        quick_sort(arr, left, index - 1);
+    }
+    
+    if (index < right) {
+        quick_sort(arr, index, right);
+    }
+}
+
+void quickSort(uint32_t arr[], unsigned int count)
+{
+    quick_sort(arr, 0, count - 1);
+}

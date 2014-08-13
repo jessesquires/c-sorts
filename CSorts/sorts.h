@@ -17,4 +17,8 @@ void selectionSort(uint32_t arr[], unsigned int count);
 
 void insertionSort(uint32_t arr[], unsigned int count);
 
+void heapSort(uint32_t arr[], unsigned int count);
+
+void quickSort(uint32_t arr[], unsigned int count);
+
 #endif
