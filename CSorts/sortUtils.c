@@ -18,7 +18,7 @@ void printArray(uint32_t arr[], unsigned int count)
     printf("Array[%d] = { ", count);
     
     for (unsigned int i = 0; i < count; i++) {
-        printf("%d%s", arr[i], (i == count - 1) ? " }\n" : ", ");
+        printf("%u%s", arr[i], (i == count - 1) ? " }\n" : ", ");
     }
 }
 
