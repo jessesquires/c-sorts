@@ -13,4 +13,8 @@
 
 void csort(uint32_t arr[], unsigned int count);
 
+void selectionSort(uint32_t arr[], unsigned int count);
+
+void insertionSort(uint32_t arr[], unsigned int count);
+
 #endif

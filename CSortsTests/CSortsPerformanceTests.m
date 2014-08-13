@@ -45,4 +45,18 @@ static const int MAX_COUNT = 15;
     }];
 }
 
+- (void)testSelectionSortPerformance
+{
+    [self measureBlock:^{
+        selectionSort(_randomArray, MAX_COUNT);
+    }];
+}
+
+- (void)testInsertionSortPerformance
+{
+    [self measureBlock:^{
+        insertionSort(_randomArray, MAX_COUNT);
+    }];
+}
+
 @end

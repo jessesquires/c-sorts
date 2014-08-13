@@ -54,4 +54,24 @@ static const int MAX_COUNT = 15;
     XCTAssertTrue(arrayIsSorted(_unsortedArray, MAX_COUNT));
 }
 
+- (void)testSelectionSort
+{
+    XCTAssertFalse(arraysAreEqual(_sortedArray, _unsortedArray, MAX_COUNT));
+    
+    selectionSort(_unsortedArray, MAX_COUNT);
+    
+    XCTAssertTrue(arraysAreEqual(_sortedArray, _unsortedArray, MAX_COUNT));
+    XCTAssertTrue(arrayIsSorted(_unsortedArray, MAX_COUNT));
+}
+
+- (void)testInsertionSort
+{
+    XCTAssertFalse(arraysAreEqual(_sortedArray, _unsortedArray, MAX_COUNT));
+    
+    insertionSort(_unsortedArray, MAX_COUNT);
+    
+    XCTAssertTrue(arraysAreEqual(_sortedArray, _unsortedArray, MAX_COUNT));
+    XCTAssertTrue(arrayIsSorted(_unsortedArray, MAX_COUNT));
+}
+
 @end
