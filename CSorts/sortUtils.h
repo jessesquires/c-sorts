@@ -11,6 +11,10 @@
 #ifndef CSorts_sortUtils_h
 #define CSorts_sortUtils_h
 
+void printArray(uint32_t arr[], unsigned int count);
 
+bool arrayIsSorted(uint32_t arr[], unsigned int count);
+
+void fillArrayWithRandomIntegers(uint32_t arr[], unsigned int count);
 
 #endif

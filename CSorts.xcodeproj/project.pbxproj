@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8829A009199B08EC00DC9A09 /* sorts.c in Sources */ = {isa = PBXBuildFile; fileRef = 88F5DB36199AFA910082DBAD /* sorts.c */; };
+		8829A00A199B08EC00DC9A09 /* sortUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 88F5DB39199AFB880082DBAD /* sortUtils.c */; };
 		88F5DB16199AF7310082DBAD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 88F5DB15199AF7310082DBAD /* main.c */; };
 		88F5DB18199AF7310082DBAD /* CSorts.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 88F5DB17199AF7310082DBAD /* CSorts.1 */; };
 		88F5DB25199AF9520082DBAD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5DB24199AF9520082DBAD /* XCTest.framework */; };
@@ -180,7 +182,7 @@
 		88F5DB0A199AF7310082DBAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Hexed Bits";
 				TargetAttributes = {
 					88F5DB21199AF9520082DBAD = {
@@ -232,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8829A009199B08EC00DC9A09 /* sorts.c in Sources */,
+				8829A00A199B08EC00DC9A09 /* sortUtils.c in Sources */,
 				88F5DB35199AF9D30082DBAD /* CSortsPerformanceTests.m in Sources */,
 				88F5DB2D199AF9520082DBAD /* CSortsTests.m in Sources */,
 			);
@@ -346,6 +350,7 @@
 		88F5DB31199AF9520082DBAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -365,6 +370,7 @@
 		88F5DB32199AF9520082DBAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -405,6 +411,7 @@
 				88F5DB32199AF9520082DBAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
