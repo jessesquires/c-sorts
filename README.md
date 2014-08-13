@@ -4,7 +4,7 @@ A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in C.
 
 ## Algorithms
 
-* C `void qsort (void* base, size_t num, size_t size, int (*compar)(const void*,const void*))`
+* C `qsort (void* base, size_t num, size_t size, int (*compar)(const void*,const void*))`
 * [Quick Sort](http://en.wikipedia.org/wiki/Quicksort)
 * [Heap Sort](http://en.wikipedia.org/wiki/Heapsort)
 * [Insertion Sort](http://en.wikipedia.org/wiki/Insertion_sort)
