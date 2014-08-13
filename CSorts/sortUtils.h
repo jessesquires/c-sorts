@@ -11,12 +11,12 @@
 #ifndef CSorts_sortUtils_h
 #define CSorts_sortUtils_h
 
-void printArray(uint32_t arr[], unsigned int count);
+void printArray(const uint32_t arr[], const unsigned int count);
 
-bool arraysAreEqual(uint32_t arr1[], uint32_t arr2[], unsigned int count);
+bool arraysAreEqual(const uint32_t arr1[], const uint32_t arr2[], const unsigned int count);
 
-bool arrayIsSorted(uint32_t arr[], unsigned int count);
+bool arrayIsSorted(const uint32_t arr[], const unsigned int count);
 
-void fillArrayWithRandomIntegers(uint32_t arr[], unsigned int count);
+void fillArrayWithRandomIntegers(uint32_t arr[], const unsigned int count);
 
 #endif

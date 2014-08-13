@@ -13,7 +13,7 @@
 #include <assert.h>
 #include <stdbool.h>
 
-void printArray(uint32_t arr[], unsigned int count)
+void printArray(const uint32_t arr[], const unsigned int count)
 {
     printf("Array[%d] = { ", count);
     
@@ -22,7 +22,7 @@ void printArray(uint32_t arr[], unsigned int count)
     }
 }
 
-bool arraysAreEqual(uint32_t arr1[], uint32_t arr2[], unsigned int count)
+bool arraysAreEqual(const uint32_t arr1[], const uint32_t arr2[], const unsigned int count)
 {
     for (unsigned int i = 0; i < count; i++) {
         if (arr1[i] != arr2[i]) {
@@ -33,7 +33,7 @@ bool arraysAreEqual(uint32_t arr1[], uint32_t arr2[], unsigned int count)
     return true;
 }
 
-bool arrayIsSorted(uint32_t arr[], unsigned int count)
+bool arrayIsSorted(const uint32_t arr[], const unsigned int count)
 {
     for (unsigned int i = 0; i < count - 1; i++) {
         int a = arr[i];
@@ -47,7 +47,7 @@ bool arrayIsSorted(uint32_t arr[], unsigned int count)
     return true;
 }
 
-void fillArrayWithRandomIntegers(uint32_t arr[], unsigned int count)
+void fillArrayWithRandomIntegers(uint32_t arr[], const unsigned int count)
 {
     printf("Generating array of %d random integers in range [0, %u)...\n", count, UINT32_MAX);
     
