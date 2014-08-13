@@ -72,9 +72,48 @@ void insertionSort(uint32_t arr[], unsigned int count)
     }
 }
 
+void sift_down(uint32_t arr[], unsigned int start, unsigned int end)
+{
+    unsigned int root = start;
+    
+    while ((root * 2 + 1) <= end) {
+        unsigned int child = root * 2 + 1;
+        
+        if (child + 1 <= end && arr[child] < arr[child + 1]) {
+            child++;
+        }
+        
+        if (arr[root] < arr[child]) {
+            swap(&arr[root], &arr[child]);
+            root = child;
+        }
+        else {
+            return;
+        }
+    }
+}
+
+void heapify(uint32_t arr[], unsigned int count)
+{
+    int start = (count - 2) / 2;
+    
+    while (start >= 0) {
+        sift_down(arr, start, count - 1);
+        start--;
+    }
+}
+
 void heapSort(uint32_t arr[], unsigned int count)
 {
+    heapify(arr, count);
     
+    unsigned int end = count - 1;
+    
+    while (end > 0) {
+        swap(&arr[end], &arr[0]);
+        sift_down(arr, 0, end - 1);
+        end--;
+    }
 }
 
 unsigned int partition(uint32_t arr[], unsigned int left, unsigned int right)

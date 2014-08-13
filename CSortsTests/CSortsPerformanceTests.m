@@ -59,4 +59,18 @@ static const int MAX_COUNT = 15;
     }];
 }
 
+- (void)testHeapSortPerformance
+{
+    [self measureBlock:^{
+        heapSort(_randomArray, MAX_COUNT);
+    }];
+}
+
+- (void)testQuickSortPerformance
+{
+    [self measureBlock:^{
+        quickSort(_randomArray, MAX_COUNT);
+    }];
+}
+
 @end

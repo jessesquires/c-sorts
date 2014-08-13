@@ -74,6 +74,16 @@ static const int MAX_COUNT = 15;
     XCTAssertTrue(arrayIsSorted(_unsortedArray, MAX_COUNT));
 }
 
+- (void)testHeapSort
+{
+    XCTAssertFalse(arraysAreEqual(_sortedArray, _unsortedArray, MAX_COUNT));
+    
+    heapSort(_unsortedArray, MAX_COUNT);
+    
+    XCTAssertTrue(arraysAreEqual(_sortedArray, _unsortedArray, MAX_COUNT));
+    XCTAssertTrue(arrayIsSorted(_unsortedArray, MAX_COUNT));
+}
+
 - (void)testQuickSort
 {
     XCTAssertFalse(arraysAreEqual(_sortedArray, _unsortedArray, MAX_COUNT));
