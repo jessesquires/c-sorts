@@ -8,14 +8,26 @@
 //  Copyright (c) 2014 Jesse Squires
 //
 
-#include <stdio.h>
+#import <XCTest/XCTest.h>
 #include "sorts.h"
 #include "sortUtils.h"
 
 
-int main(int argc, const char * argv[])
+@interface CSortsPerformanceTests : XCTestCase
+
+@end
+
+
+@implementation CSortsPerformanceTests
+
+- (void)setUp
 {
-    printf("Hello, World!\n");
-    return 0;
+    [super setUp];
 }
 
+- (void)tearDown
+{
+    [super tearDown];
+}
+
+@end

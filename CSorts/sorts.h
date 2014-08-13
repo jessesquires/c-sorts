@@ -8,14 +8,9 @@
 //  Copyright (c) 2014 Jesse Squires
 //
 
-#include <stdio.h>
-#include "sorts.h"
-#include "sortUtils.h"
+#ifndef CSorts_sorts_h
+#define CSorts_sorts_h
 
 
-int main(int argc, const char * argv[])
-{
-    printf("Hello, World!\n");
-    return 0;
-}
 
+#endif

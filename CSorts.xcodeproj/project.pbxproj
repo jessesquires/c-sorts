@@ -12,6 +12,9 @@
 		88F5DB25199AF9520082DBAD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5DB24199AF9520082DBAD /* XCTest.framework */; };
 		88F5DB2B199AF9520082DBAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88F5DB29199AF9520082DBAD /* InfoPlist.strings */; };
 		88F5DB2D199AF9520082DBAD /* CSortsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F5DB2C199AF9520082DBAD /* CSortsTests.m */; };
+		88F5DB35199AF9D30082DBAD /* CSortsPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F5DB34199AF9D30082DBAD /* CSortsPerformanceTests.m */; };
+		88F5DB37199AFA910082DBAD /* sorts.c in Sources */ = {isa = PBXBuildFile; fileRef = 88F5DB36199AFA910082DBAD /* sorts.c */; };
+		88F5DB3A199AFB880082DBAD /* sortUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 88F5DB39199AFB880082DBAD /* sortUtils.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,11 @@
 		88F5DB2A199AF9520082DBAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		88F5DB2C199AF9520082DBAD /* CSortsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSortsTests.m; sourceTree = "<group>"; };
 		88F5DB2E199AF9520082DBAD /* CSortsTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSortsTests-Prefix.pch"; sourceTree = "<group>"; };
+		88F5DB34199AF9D30082DBAD /* CSortsPerformanceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSortsPerformanceTests.m; sourceTree = "<group>"; };
+		88F5DB36199AFA910082DBAD /* sorts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sorts.c; sourceTree = "<group>"; };
+		88F5DB38199AFAA10082DBAD /* sorts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sorts.h; sourceTree = "<group>"; };
+		88F5DB39199AFB880082DBAD /* sortUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sortUtils.c; sourceTree = "<group>"; };
+		88F5DB3B199AFB970082DBAD /* sortUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sortUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +98,12 @@
 		88F5DB14199AF7310082DBAD /* CSorts */ = {
 			isa = PBXGroup;
 			children = (
-				88F5DB15199AF7310082DBAD /* main.c */,
 				88F5DB17199AF7310082DBAD /* CSorts.1 */,
+				88F5DB15199AF7310082DBAD /* main.c */,
+				88F5DB38199AFAA10082DBAD /* sorts.h */,
+				88F5DB36199AFA910082DBAD /* sorts.c */,
+				88F5DB3B199AFB970082DBAD /* sortUtils.h */,
+				88F5DB39199AFB880082DBAD /* sortUtils.c */,
 			);
 			path = CSorts;
 			sourceTree = "<group>";
@@ -108,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				88F5DB2C199AF9520082DBAD /* CSortsTests.m */,
+				88F5DB34199AF9D30082DBAD /* CSortsPerformanceTests.m */,
 				88F5DB27199AF9520082DBAD /* Supporting Files */,
 			);
 			path = CSortsTests;
@@ -210,6 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				88F5DB16199AF7310082DBAD /* main.c in Sources */,
+				88F5DB3A199AFB880082DBAD /* sortUtils.c in Sources */,
+				88F5DB37199AFA910082DBAD /* sorts.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F5DB35199AF9D30082DBAD /* CSortsPerformanceTests.m in Sources */,
 				88F5DB2D199AF9520082DBAD /* CSortsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
