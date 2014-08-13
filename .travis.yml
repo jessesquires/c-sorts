@@ -1,0 +1,4 @@
+language: objective-c
+
+script: 
+- xctool clean build test -project CSorts.xcodeproj -scheme CSortsRelease
