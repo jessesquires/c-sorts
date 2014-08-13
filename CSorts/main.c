@@ -24,15 +24,19 @@ int main(int argc, const char * argv[])
     
     uint32_t randomArray[MAX_COUNT];
     
+    double totalTime = 0.0;
+    
     for (unsigned int t = 1; t <= NUM_TRIALS; t++) {
         printf("\n::: TRIAL %d :::\n", t);
         
         fillArrayWithRandomIntegers(randomArray, MAX_COUNT);
         
-        sortArrayWithNameUsingFunc(randomArray, MAX_COUNT, "CSort", csort);
+        totalTime += sortArrayWithNameUsingFunc(randomArray, MAX_COUNT, "Quick Sort", quickSort);
         
         memset(&randomArray[0], 0, sizeof(randomArray));
     }
+    
+    printf("\n QUICK SORT AVG = %lf\n", totalTime / NUM_TRIALS);
     
     printf("\n");
     return 0;
