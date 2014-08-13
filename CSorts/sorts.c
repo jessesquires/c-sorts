@@ -21,7 +21,7 @@ void swap(uint32_t *x, uint32_t *y)
     *x ^= *y;
 }
 
-int compareMyType (const void * a, const void * b)
+int compare(const void * a, const void * b)
 {
     if ( *(uint32_t*)a < *(uint32_t*)b ) {
         return -1;
@@ -34,12 +34,12 @@ int compareMyType (const void * a, const void * b)
     return 0;
 }
 
-void csort(uint32_t arr[], unsigned int count)
+void csort(uint32_t arr[], const unsigned int count)
 {
-    qsort(arr, count, sizeof(uint32_t), compareMyType);
+    qsort(arr, count, sizeof(uint32_t), compare);
 }
 
-void selectionSort(uint32_t arr[], unsigned int count)
+void selectionSort(uint32_t arr[], const unsigned int count)
 {
     unsigned int minIndex = 0;
     
@@ -58,7 +58,7 @@ void selectionSort(uint32_t arr[], unsigned int count)
     }
 }
 
-void insertionSort(uint32_t arr[], unsigned int count)
+void insertionSort(uint32_t arr[], const unsigned int count)
 {
     for (unsigned int i = 1; i < count; i++) {
         unsigned int j = i;
@@ -72,7 +72,7 @@ void insertionSort(uint32_t arr[], unsigned int count)
     }
 }
 
-void sift_down(uint32_t arr[], unsigned int start, unsigned int end)
+void sift_down(uint32_t arr[], const unsigned int start, const unsigned int end)
 {
     unsigned int root = start;
     
@@ -93,7 +93,7 @@ void sift_down(uint32_t arr[], unsigned int start, unsigned int end)
     }
 }
 
-void heapify(uint32_t arr[], unsigned int count)
+void heapify(uint32_t arr[], const unsigned int count)
 {
     int start = (count - 2) / 2;
     
@@ -103,7 +103,7 @@ void heapify(uint32_t arr[], unsigned int count)
     }
 }
 
-void heapSort(uint32_t arr[], unsigned int count)
+void heapSort(uint32_t arr[], const unsigned int count)
 {
     heapify(arr, count);
     
@@ -116,7 +116,7 @@ void heapSort(uint32_t arr[], unsigned int count)
     }
 }
 
-unsigned int partition(uint32_t arr[], unsigned int left, unsigned int right)
+unsigned int partition(uint32_t arr[], const unsigned int left, const unsigned int right)
 {
     unsigned int i = left;
     unsigned int j = right;
@@ -143,7 +143,7 @@ unsigned int partition(uint32_t arr[], unsigned int left, unsigned int right)
     return i;
 }
 
-void quick_sort(uint32_t arr[], unsigned int left, unsigned int right)
+void quick_sort(uint32_t arr[], const unsigned int left, const unsigned int right)
 {
     unsigned int index = partition(arr, left, right);
     
@@ -156,7 +156,7 @@ void quick_sort(uint32_t arr[], unsigned int left, unsigned int right)
     }
 }
 
-void quickSort(uint32_t arr[], unsigned int count)
+void quickSort(uint32_t arr[], const unsigned int count)
 {
     quick_sort(arr, 0, count - 1);
 }
