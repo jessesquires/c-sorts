@@ -347,6 +347,7 @@
 		88F5DB1D199AF7310082DBAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
