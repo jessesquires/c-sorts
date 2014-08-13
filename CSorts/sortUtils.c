@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <stdbool.h>
+#include <time.h>
+#include <string.h>
 
 void printArray(const uint32_t arr[], const unsigned int count)
 {
@@ -36,8 +38,8 @@ bool arraysAreEqual(const uint32_t arr1[], const uint32_t arr2[], const unsigned
 bool arrayIsSorted(const uint32_t arr[], const unsigned int count)
 {
     for (unsigned int i = 0; i < count - 1; i++) {
-        int a = arr[i];
-        int b = arr[i + 1];
+        uint32_t a = arr[i];
+        uint32_t b = arr[i + 1];
         
         if (a > b) {
             return false;
@@ -60,8 +62,25 @@ void fillArrayWithRandomIntegers(uint32_t arr[], const unsigned int count)
 
 double sortArrayWithNameUsingFunc(uint32_t arr[],
                                   const unsigned int count,
-                                  const char * str[],
+                                  const char sortName[],
                                   void (*sortFunc)(uint32_t[], const unsigned int))
 {
-    return 0.0;
+    uint32_t arrCopy[count];
+    memcpy(arrCopy, arr, sizeof(uint32_t) * count);
+    
+    printf("Running %s...\n", sortName);
+    
+    time_t startTime = time(NULL);
+    
+    sortFunc(arrCopy, count);
+    
+    time_t endTime = time(NULL);
+    
+    assert(arrayIsSorted(arrCopy, count));
+    
+    double totalTime = difftime(endTime, startTime);
+    
+    printf("%s finished in %lf sec\n", sortName, totalTime);
+    
+    return totalTime;
 }

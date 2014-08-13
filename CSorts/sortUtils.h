@@ -21,7 +21,7 @@ void fillArrayWithRandomIntegers(uint32_t arr[], const unsigned int count);
 
 double sortArrayWithNameUsingFunc(uint32_t arr[],
                                   const unsigned int count,
-                                  const char * str[],
+                                  const char sortName[],
                                   void (*sortFunc)(uint32_t[], const unsigned int));
 
 #endif

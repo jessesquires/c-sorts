@@ -9,6 +9,7 @@
 //
 
 #include <stdlib.h>
+#include <stdio.h>
 
 void swap(uint32_t *x, uint32_t *y)
 {
