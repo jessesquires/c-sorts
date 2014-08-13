@@ -11,6 +11,8 @@
 #ifndef CSorts_sortUtils_h
 #define CSorts_sortUtils_h
 
+#include <stdbool.h>
+
 void printArray(const uint32_t arr[], const unsigned int count);
 
 bool arraysAreEqual(const uint32_t arr1[], const uint32_t arr2[], const unsigned int count);
