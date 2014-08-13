@@ -57,3 +57,11 @@ void fillArrayWithRandomIntegers(uint32_t arr[], const unsigned int count)
     
     assert(!arrayIsSorted(arr, count));
 }
+
+double sortArrayWithNameUsingFunc(uint32_t arr[],
+                                  const unsigned int count,
+                                  const char * str[],
+                                  void (*sortFunc)(uint32_t[], const unsigned int))
+{
+    return 0.0;
+}
