@@ -70,15 +70,15 @@ double sortArrayWithNameUsingFunc(uint32_t arr[],
     
     printf("Running %s...\n", sortName);
     
-    time_t startTime = time(NULL);
+    double startTime = clock();
     
     sortFunc(arrCopy, count);
     
-    time_t endTime = time(NULL);
+    double endTime = clock();
     
     assert(arrayIsSorted(arrCopy, count));
     
-    double totalTime = difftime(endTime, startTime);
+    double totalTime = (endTime - startTime) / CLOCKS_PER_SEC;
     
     printf("%s finished in %lf sec\n", sortName, totalTime);
     
