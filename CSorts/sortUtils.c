@@ -68,7 +68,7 @@ double sortArrayWithNameUsingFunc(uint32_t arr[],
     uint32_t arrCopy[count];
     memcpy(arrCopy, arr, sizeof(uint32_t) * count);
     
-    printf("Running %s...\n", sortName);
+    printf("Running %s sort...\n", sortName);
     
     double startTime = clock();
     
@@ -80,7 +80,7 @@ double sortArrayWithNameUsingFunc(uint32_t arr[],
     
     double totalTime = (endTime - startTime) / CLOCKS_PER_SEC;
     
-    printf("%s finished in %lf sec\n", sortName, totalTime);
+    printf("%s sort finished in %lf sec\n\n", sortName, totalTime);
     
     return totalTime;
 }
