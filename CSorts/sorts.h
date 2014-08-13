@@ -11,5 +11,6 @@
 #ifndef CSorts_sorts_h
 #define CSorts_sorts_h
 
+void csort(uint32_t arr[], unsigned int count);
 
 #endif

@@ -13,6 +13,8 @@
 
 void printArray(uint32_t arr[], unsigned int count);
 
+bool arraysAreEqual(uint32_t arr1[], uint32_t arr2[], unsigned int count);
+
 bool arrayIsSorted(uint32_t arr[], unsigned int count);
 
 void fillArrayWithRandomIntegers(uint32_t arr[], unsigned int count);

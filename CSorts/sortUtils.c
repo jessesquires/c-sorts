@@ -17,9 +17,20 @@ void printArray(uint32_t arr[], unsigned int count)
 {
     printf("Array[%d] = { ", count);
     
-    for (int i = 0; i < count; i++) {
+    for (unsigned int i = 0; i < count; i++) {
         printf("%d%s", arr[i], (i == count - 1) ? " }\n" : ", ");
     }
+}
+
+bool arraysAreEqual(uint32_t arr1[], uint32_t arr2[], unsigned int count)
+{
+    for (unsigned int i = 0; i < count; i++) {
+        if (arr1[i] != arr2[i]) {
+            return false;
+        }
+    }
+    
+    return true;
 }
 
 bool arrayIsSorted(uint32_t arr[], unsigned int count)
