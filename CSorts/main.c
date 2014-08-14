@@ -19,8 +19,8 @@
 
 int main(int argc, const char * argv[])
 {
-    const uint32_t MAX_COUNT = 10000;
-    const uint32_t NUM_TRIALS = 10;
+    const uint32_t MAX_COUNT = 100000;
+    const uint32_t NUM_TRIALS = 20;
     const unsigned int NUM_SORTS = 5;
     
     char * sortNames[NUM_SORTS] = { "C", "Quick", "Heap", "Insertion" ,"Selection" };
