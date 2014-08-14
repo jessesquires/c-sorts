@@ -19,33 +19,15 @@
 
 @implementation CSortUtilsTests
 
-- (void)testArraysAreEqual
+- (void)testArrayIsSortedUtil
 {
     const int count = 10;
-    uint32_t arr1[count] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    uint32_t arr2[count] = { 6, 2, 3, 9, 1, 5, 7, 10, 4, 8 };
     
-    XCTAssertFalse(arraysAreEqual(arr1, arr2, count));
+    uint32_t arrSorted[count] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    XCTAssertTrue(arrayIsSorted(arrSorted, count));
     
-    uint32_t arr1Copy[count] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    
-    XCTAssertTrue(arraysAreEqual(arr1, arr1Copy, count));
-}
-
-- (void)testArrayIsSortedUtilSorted
-{
-    const int count = 10;
-    uint32_t arr[count] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    
-    XCTAssertTrue(arrayIsSorted(arr, count));
-}
-
-- (void)testArrayIsSortedUtilNotSorted
-{
-    const int count = 10;
-    uint32_t arr[count] = { 6, 2, 3, 9, 1, 5, 7, 10, 4, 8 };
-    
-    XCTAssertFalse(arrayIsSorted(arr, count));
+    uint32_t arrUnsorted[count] = { 6, 2, 3, 9, 1, 5, 7, 10, 4, 8 };
+    XCTAssertFalse(arrayIsSorted(arrUnsorted, count));
 }
 
 - (void)testFillArrayWithRandomIntegersUtil

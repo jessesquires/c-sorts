@@ -15,8 +15,6 @@
 
 void printArray(const uint32_t arr[], const unsigned int count);
 
-bool arraysAreEqual(const uint32_t arr1[], const uint32_t arr2[], const unsigned int count);
-
 bool arrayIsSorted(const uint32_t arr[], const unsigned int count);
 
 void fillArrayWithRandomIntegers(uint32_t arr[], const unsigned int count);
