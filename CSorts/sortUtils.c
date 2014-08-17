@@ -12,8 +12,6 @@
 
 #include <stdio.h>
 #include <assert.h>
-#include <time.h>
-#include <string.h>
 
 void printArray(const uint32_t arr[], const unsigned int count)
 {
@@ -47,29 +45,4 @@ void fillArrayWithRandomIntegers(uint32_t arr[], const unsigned int count)
     }
     
     assert(!arrayIsSorted(arr, count));
-}
-
-double sortArrayWithNameUsingFunc(uint32_t arr[],
-                                  const unsigned int count,
-                                  const char sortName[],
-                                  void (*sortFunc)(uint32_t[], const unsigned int))
-{
-    uint32_t arrCopy[count];
-    memcpy(arrCopy, arr, sizeof(uint32_t) * count);
-    
-    printf("Running %s sort...\n", sortName);
-    
-    double startTime = clock();
-    
-    sortFunc(arrCopy, count);
-    
-    double endTime = clock();
-    
-    assert(arrayIsSorted(arrCopy, count));
-    
-    double totalTime = (endTime - startTime) / CLOCKS_PER_SEC;
-    
-    printf("%s sort finished in %lf sec\n\n", sortName, totalTime);
-    
-    return totalTime;
 }

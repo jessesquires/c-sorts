@@ -11,6 +11,7 @@
 		8829A00A199B08EC00DC9A09 /* sortUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 88F5DB39199AFB880082DBAD /* sortUtils.c */; };
 		8829A00C199B1C2B00DC9A09 /* CSortUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8829A00B199B1C2B00DC9A09 /* CSortUtilsTests.m */; };
 		888F17BE19A0865F00E25DBF /* sortBenchmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 888F17BC19A0865F00E25DBF /* sortBenchmark.c */; };
+		888F17BF19A1259000E25DBF /* sortBenchmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 888F17BC19A0865F00E25DBF /* sortBenchmark.c */; };
 		88F5DB16199AF7310082DBAD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 88F5DB15199AF7310082DBAD /* main.c */; };
 		88F5DB18199AF7310082DBAD /* CSorts.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 88F5DB17199AF7310082DBAD /* CSorts.1 */; };
 		88F5DB25199AF9520082DBAD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5DB24199AF9520082DBAD /* XCTest.framework */; };
@@ -243,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888F17BF19A1259000E25DBF /* sortBenchmark.c in Sources */,
 				8829A00C199B1C2B00DC9A09 /* CSortUtilsTests.m in Sources */,
 				8829A009199B08EC00DC9A09 /* sorts.c in Sources */,
 				8829A00A199B08EC00DC9A09 /* sortUtils.c in Sources */,

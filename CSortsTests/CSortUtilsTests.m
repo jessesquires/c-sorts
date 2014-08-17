@@ -9,6 +9,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#include "sortBenchmark.h"
 #include "sorts.h"
 #include "sortUtils.h"
 
@@ -34,6 +35,7 @@
 {
     const int count = 10;
     uint32_t arr[count];
+    memset(&arr[0], 0, sizeof(arr));
     
     for (unsigned int i = 0; i < count; i++) {
         XCTAssertTrue(arr[i] == 0);
@@ -44,6 +46,32 @@
     for (unsigned int i = 0; i < count; i++) {
         XCTAssertFalse(arr[i] == 0);
     }
+}
+
+- (void)testBenchmarkAverage
+{
+    const unsigned int count = 5;
+    double times[count] = { 5.0, 10.0, 20.0, 30.0, 5.0 };
+    
+    SortBenchmark b = NewSortBenchmark(SortAlgorithmC, count);
+    memcpy(b.sortTimes, times, sizeof(double) * count);
+    
+    XCTAssertEqual(averageSortTime(b), 14.0);
+    
+    free(b.sortTimes);
+}
+
+- (void)testBenchmarkStandardDeviation
+{
+    const unsigned int count = 5;
+    double times[count] = { 5.0, 10.0, 20.0, 30.0, 5.0 };
+    
+    SortBenchmark b = NewSortBenchmark(SortAlgorithmC, count);
+    memcpy(b.sortTimes, times, sizeof(double) * count);
+    
+    XCTAssertEqualWithAccuracy(standardDeviation(b), 9.6953, 0.0001);
+    
+    free(b.sortTimes);
 }
 
 @end

@@ -16,29 +16,32 @@
 
 #include "sorts.h"
 #include "sortUtils.h"
+#include "sortBenchmark.h"
 
 int main(int argc, const char * argv[])
 {
-    const uint32_t MAX_COUNT = 100000;
-    const uint32_t NUM_TRIALS = 20;
-    const unsigned int NUM_SORTS = 5;
+    static const uint32_t MAX_COUNT = 10000;
+    static const uint32_t NUM_TRIALS = 10;
+    static const unsigned int NUM_SORTS = 5;
     
-    char * sortNames[NUM_SORTS] = { "C", "Quick", "Heap", "Insertion" ,"Selection" };
-    
-    void * sortFuncs[NUM_SORTS] = { csort, quickSort, heapSort, insertionSort, selectionSort };
-    
-    double sortTimes[NUM_SORTS];
-    memset(&sortTimes[0], 0, sizeof(sortTimes));
+    SortBenchmark benchmarks[NUM_SORTS] = { NewSortBenchmark(SortAlgorithmC, NUM_TRIALS),
+                                            NewSortBenchmark(SortAlgorithmQuick, NUM_TRIALS),
+                                            NewSortBenchmark(SortAlgorithmHeap, NUM_TRIALS),
+                                            NewSortBenchmark(SortAlgorithmInsertion, NUM_TRIALS),
+                                            NewSortBenchmark(SortAlgorithmSelection, NUM_TRIALS) };
     
     uint32_t randomArray[MAX_COUNT];
     
-    for (unsigned int t = 1; t <= NUM_TRIALS; t++) {
-        printf("\n::: TRIAL %d :::\n", t);
+    for (unsigned int t = 0; t < NUM_TRIALS; t++) {
+        printf("\n::: TRIAL %d :::\n", t + 1);
         
         fillArrayWithRandomIntegers(randomArray, MAX_COUNT);
         
         for (unsigned int s = 0; s < NUM_SORTS; s++) {
-            sortTimes[s] += sortArrayWithNameUsingFunc(randomArray, MAX_COUNT, sortNames[s], sortFuncs[s]);
+            SortBenchmark b = benchmarks[s];
+            
+            double time = sortArrayWithBenchmark(randomArray, MAX_COUNT, b);
+            b.sortTimes[t] = time;
         }
         
         memset(&randomArray[0], 0, sizeof(randomArray));
@@ -46,10 +49,15 @@ int main(int argc, const char * argv[])
     
     printf("\nFinal Results:\n--------------\n");
     for (unsigned int i = 0; i < NUM_SORTS; i++) {
-        printf("%s sort average time = %lf sec\n", sortNames[i], sortTimes[i] / NUM_TRIALS);
+        printBenchmark(benchmarks[i]);
     }
     
     printf("\n");
+    
+    for (unsigned int i = 0; i < NUM_SORTS; i++) {
+        free(benchmarks[i].sortTimes);
+    }
+    
     return 0;
 }
 

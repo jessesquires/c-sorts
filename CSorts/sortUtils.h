@@ -20,9 +20,4 @@ bool arrayIsSorted(const uint32_t arr[], const unsigned int count);
 
 void fillArrayWithRandomIntegers(uint32_t arr[], const unsigned int count);
 
-double sortArrayWithNameUsingFunc(uint32_t arr[],
-                                  const unsigned int count,
-                                  const char sortName[],
-                                  void (*sortFunc)(uint32_t[], const unsigned int));
-
 #endif
