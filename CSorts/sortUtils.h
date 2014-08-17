@@ -8,10 +8,11 @@
 //  Copyright (c) 2014 Jesse Squires
 //
 
-#ifndef CSorts_sortUtils_h
-#define CSorts_sortUtils_h
+#ifndef __CSorts__sortUtils__
+#define __CSorts__sortUtils__
 
 #include <stdbool.h>
+#include <stdlib.h>
 
 void printArray(const uint32_t arr[], const unsigned int count);
 

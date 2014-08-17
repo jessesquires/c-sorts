@@ -8,10 +8,10 @@
 //  Copyright (c) 2014 Jesse Squires
 //
 
+#include "sortUtils.h"
+
 #include <stdio.h>
-#include <stdlib.h>
 #include <assert.h>
-#include <stdbool.h>
 #include <time.h>
 #include <string.h>
 

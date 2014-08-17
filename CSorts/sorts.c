@@ -8,6 +8,8 @@
 //  Copyright (c) 2014 Jesse Squires
 //
 
+#include "sorts.h"
+
 #include <stdlib.h>
 #include <stdio.h>
 

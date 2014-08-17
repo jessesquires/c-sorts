@@ -8,8 +8,10 @@
 //  Copyright (c) 2014 Jesse Squires
 //
 
-#ifndef CSorts_sorts_h
-#define CSorts_sorts_h
+#ifndef __CSorts__sorts__
+#define __CSorts__sorts__
+
+#include <stdlib.h>
 
 void csort(uint32_t arr[], const unsigned int count);
 
