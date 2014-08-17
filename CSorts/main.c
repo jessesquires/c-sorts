@@ -20,8 +20,8 @@
 
 int main(int argc, const char * argv[])
 {
-    static const uint32_t MAX_COUNT = 10000;
-    static const uint32_t NUM_TRIALS = 10;
+    static const uint32_t MAX_COUNT = 100000;
+    static const uint32_t NUM_TRIALS = 20;
     static const unsigned int NUM_SORTS = 5;
     
     SortBenchmark benchmarks[NUM_SORTS] = { NewSortBenchmark(SortAlgorithmC, NUM_TRIALS),
