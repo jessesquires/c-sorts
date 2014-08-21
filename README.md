@@ -2,6 +2,10 @@
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in C.
 
+Read the blog post [*Apples to apples, Part III*](http://www.jessesquires.com/apples-to-apples-part-three/).
+
+See [Swift-Sorts](https://github.com/jessesquires/swift-sorts) for comparison.
+
 ## Algorithms
 
 * C `qsort (void* base, size_t num, size_t size, int (*compar)(const void*,const void*))`
