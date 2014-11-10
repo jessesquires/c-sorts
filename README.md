@@ -1,4 +1,4 @@
-## C Sorts
+## C Sorts [![Build Status](https://secure.travis-ci.org/jessesquires/c-sorts.svg)](http://travis-ci.org/jessesquires/c-sorts)
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in C.
 
