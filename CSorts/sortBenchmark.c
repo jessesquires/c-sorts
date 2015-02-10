@@ -81,7 +81,7 @@ double sortArrayWithBenchmark(uint32_t arr[], const unsigned int count, SortBenc
 
 void printBenchmark(SortBenchmark b)
 {
-    printf("%s sort: avg time = %lf sec, std dev = %lf\n", b.algorithm, averageSortTime(b), standardDeviation(b));
+    printf("%s sort: %.6lf s (± %.6lf)\n", b.algorithm, averageSortTime(b), standardDeviation(b));
 }
 
 double averageSortTime(SortBenchmark b)
