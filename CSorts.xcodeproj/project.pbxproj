@@ -191,7 +191,7 @@
 		88F5DB0A199AF7310082DBAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Hexed Bits";
 				TargetAttributes = {
 					88F5DB21199AF9520082DBAD = {
@@ -292,6 +292,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -375,6 +376,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CSortsTests/CSortsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hexedbits.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -391,6 +393,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CSortsTests/CSortsTests-Prefix.pch";
 				INFOPLIST_FILE = "CSortsTests/CSortsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hexedbits.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};

@@ -1,9 +1,9 @@
 language: objective-c
 
-before_install: 
+before_install:
 - brew update
 - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
 
-script: 
+script:
 - xctool clean build -project CSorts.xcodeproj -scheme CSortsRelease
-- xctool test -project CSorts.xcodeproj -scheme CSortsTests
+- xctool test -project CSorts.xcodeproj -scheme CSortsTests GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
