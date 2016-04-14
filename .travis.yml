@@ -2,8 +2,8 @@ language: objective-c
 osx_image: xcode7.3
 
 script: 
-- xctool clean build -project CSorts.xcodeproj -scheme CSortsRelease -sdk iphonesimulator
-- xctool test -project CSorts.xcodeproj -scheme CSortsTests -sdk iphonesimulator
+- xctool clean build -project CSorts.xcodeproj -scheme CSortsRelease
+- xctool test -project CSorts.xcodeproj -scheme CSortsTests
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
